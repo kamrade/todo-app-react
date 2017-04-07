@@ -1,0 +1,5 @@
+We gonna generate 4 diferent actions:
+1. Update search text
+2. Toggle "Show completed todos"
+3. Toggling individual todo
+4. Process of entering item
