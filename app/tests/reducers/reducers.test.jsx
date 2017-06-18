@@ -1,6 +1,9 @@
 var expect = require('expect');
 var df     = require('deep-freeze-strict');
 
+// df = Deep Freeze allow reducers modify arguments
+// reducers are pure functions
+
 var reducers = require('reducers');
 
 describe('Reducers', () => {
