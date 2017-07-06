@@ -1,11 +1,14 @@
 var React = require('react');
 var ReactDOM = require('react-dom');
 // var Route = require('react-router').Route;
+
+var { Provider } = require('react-redux');
 var { Router, Route, IndexRoute, Link, Navigation, browserHistory, hashHistory } = require('react-router');
 
 var TodoApp = require('TodoApp');
 
 var actions = require('actions');
+// reducers are imported in store
 var store   = require('configureStore').configure();
 
 store.subscribe(() => {
@@ -23,6 +26,8 @@ $(document).foundation();
 require('style!css!sass!applicationStyles');
 
 ReactDOM.render(
-	<TodoApp />,
-	document.getElementById('app')
+  <Provider store={store}>
+    <TodoApp/>
+  </Provider>,
+  document.getElementById('app')
 );
