@@ -13,9 +13,7 @@ var TodoList = React.createClass({
       } else {
         return todos.map((todo)=>{
           return (
-            <Todo
-              key={todo.id} {...todo}
-            />
+            <Todo key={todo.id} {...todo} />
           );
         })
       }
